@@ -1,0 +1,8 @@
+@import 'meyers-reset.css';
+@import 'reset.css';
+
+.corgi,
+.pug-sleep,
+.cat-top {
+	display: none;
+}
