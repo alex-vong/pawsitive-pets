@@ -110,106 +110,89 @@ nav.site-header {
 
 /* Site Content */
 
-.pet {
-	/* display: flex;
-	flex-direction: column; */
+.site-content .pet {
 	padding: 20px;
 }
 
-/* .pet .mugshot {
+.site-content .inner-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.pet .mugshot {
 	border-radius: 50%;
 	width: 200px;
 	border: 2px solid white;
-} */
+}
 
-/* .pet a {
+.pet a {
 	font-family: 'Itim', cursive;
-	font-size: 25px;
+	font-size: 23px;
 	color: var(--orange);
-	margin-top: 20px;
+	margin: 20px auto;
 	padding: 15px;
 	border: 3px solid var(--orange);
 	width: min(80%, 275px);
-} */
+}
 
-/* .husky {
+.husky {
 	background-color: var(--purple);
-} */
+}
 
-/* .kitty {
+.kitty {
 	background-color: #cfcac4;
-} */
+}
 
-/* .pug-sleep {
-	bottom: 0;
-	right: 0;
-	width: 300px;
-	margin-top: 20px;
-} */
-/*
-.pom picture,
-.husky picture,
-.kitty picture {
-	display: flex;
-	justify-content: center;
-} */
-/* .corgi {
-	width: 200px;
-	margin-top: 20px;
-} */
+.pom {
+	background-color: var(--slate-blue);
+}
 
-/* .cat-top {
-	margin: 20px 0 15px;
-} */
-
-/* .kitty a {
+.kitty a {
 	color: var(--purple);
 	border-color: var(--purple);
-} */
+}
 
-/* .kitty .pet-description {
+.kitty .pet-description {
 	color: #333;
-} */
+}
 
-/* .pom {
-	background-color: var(--slate-blue);
-} */
-
-/* .pom a {
+.pom a {
 	color: var(--green);
 	border-color: var(--green);
-}  */
+}
 
 /* footer */
 
-footer {
+.footer {
 	background-color: var(--orange);
 	color: var(--white);
 	padding: 10px 15px;
 }
 
-footer p {
+.footer p {
 	margin-top: 15px;
 }
 
-footer p:last-child {
+.footer p:last-child {
 	margin-bottom: 20px;
 }
 
 /* hover */
-/*
-a:hover {
+
+.pet-info a:hover {
 	background-color: var(--green);
 	color: var(--white);
 	scale: 1.05;
-} */
-/*
+}
+
 .kitty a:hover {
 	background-color: var(--orange);
-} */
-/*
+}
+
 .pom a:hover {
 	background-color: var(--purple);
-} */
+}
 
 /* Media Queries */
