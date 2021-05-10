@@ -414,13 +414,13 @@ a:hover {
 	}
 
 	picture.kitty-top {
-		left: 5%;
+		left: 10%;
 	}
 
 	picture.pug,
 	picture.corgi-wink {
 		position: absolute;
 		bottom: 0;
-		right: 5%;
+		right: 10%;
 	}
 }
