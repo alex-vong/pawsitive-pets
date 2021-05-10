@@ -13,6 +13,10 @@
 
 /* Typepography */
 
+* {
+	scroll-behavior: smooth;
+}
+
 .heading {
 	font-family: 'Short Stack', cursive;
 	padding: 15px 0;
@@ -56,7 +60,7 @@ p {
 
 .pug,
 .kitty-top,
-.corgi-wink {
+.dog-house {
 	display: none;
 }
 
@@ -194,3 +198,57 @@ nav.site-header {
 }
 
 /* Media Queries */
+
+@media (max-width: 350px) {
+	.site-header .site-logo {
+		width: 90px;
+	}
+
+	.site-header .site-heading-text {
+		font-size: 35px;
+	}
+}
+
+@media (min-width: 500px) {
+	.inner-column {
+		width: min(90%, 1000px);
+		margin: 0 auto;
+	}
+	nav.site-header {
+		padding: 15px;
+		position: sticky;
+		top: 0;
+	}
+
+	.site-header h1.site-heading-text {
+		display: flex;
+		align-items: center;
+	}
+}
+
+@media (min-width: 768px) {
+	.site-content .inner-column {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.pet-info {
+		margin-left: 15px;
+	}
+
+	.pet-info p {
+		text-align: left;
+	}
+
+	.footer {
+		position: relative;
+	}
+
+	.dog-house {
+		display: block;
+		position: absolute;
+		width: 250px;
+		bottom: 5%;
+		right: min(5%, 20px);
+	}
+}
