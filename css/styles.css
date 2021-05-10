@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Capriola&display=swap');
 @import 'meyers-reset.css';
 @import 'reset.css';
 
@@ -14,10 +13,12 @@
 
 /* Typepography */
 
+* {
+	scroll-behavior: smooth;
+}
+
 .heading {
-	font-family: 'Itim', cursive;
 	font-family: 'Short Stack', cursive;
-	font-family: 'Capriola', sans-serif;
 	padding: 15px 0;
 }
 
@@ -50,7 +51,11 @@ p {
 .kitty i {
 	color: var(--purple);
 }
+
 .pom i {
+	color: var(--slate-blue);
+}
+.pets-of-the-week i {
 	color: var(--green);
 }
 
@@ -58,21 +63,21 @@ p {
 
 .pug,
 .kitty-top,
-.corgi-wink {
+.dog-house,
+.additional-text {
 	display: none;
 }
 
-header {
+nav {
 	position: sticky;
 	top: 0;
+	z-index: 90;
 }
 
 nav.site-header {
 	display: flex;
 	padding: 10px;
 	background: url('../images/humane.png') no-repeat center center/cover;
-	position: sticky;
-	top: 0;
 }
 
 .site-header .site-logo {
@@ -102,13 +107,13 @@ nav.site-header {
 	height: 250px;
 }
 
-/* .pet-info {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-} */
-
 /* Site Content */
+
+.pets-of-the-week {
+	background-color: var(--slate-blue);
+	color: var(--white);
+	text-align: center;
+}
 
 .site-content .pet {
 	padding: 20px;
@@ -196,3 +201,192 @@ nav.site-header {
 }
 
 /* Media Queries */
+
+/* smaller than 350px */
+@media (max-width: 350px) {
+	.site-header .site-logo {
+		width: 90px;
+	}
+
+	.site-header .site-heading-text {
+		font-size: 35px;
+	}
+}
+
+@media (min-width: 500px) {
+	.inner-column {
+		width: min(90%, 1000px);
+		margin: 0 auto;
+	}
+	nav.site-header {
+		padding: 15px;
+		position: sticky;
+		top: 0;
+	}
+
+	.site-header h1.site-heading-text {
+		display: flex;
+		align-items: center;
+	}
+}
+
+/* tablet size */
+@media (min-width: 768px) {
+	.site-content .inner-column,
+	.site-landing .inner-column {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.site-landing {
+		height: 35vh;
+		display: flex;
+		align-items: center;
+	}
+
+	.site-landing .inner-column {
+		width: 95%;
+	}
+
+	.site-landing picture:first-child {
+		border: 5px solid var(--purple);
+		flex: 1;
+	}
+
+	.additional-text {
+		display: block;
+	}
+
+	.site-landing .landing-text {
+		flex: 1;
+		margin: 0 0 0 5px;
+		font-size: 16px;
+		padding: 10px;
+	}
+
+	.pet-info {
+		margin-left: 15px;
+	}
+
+	.pet-info p {
+		text-align: left;
+	}
+
+	.footer {
+		position: relative;
+	}
+
+	.dog-house {
+		display: block;
+		position: absolute;
+		width: 280px;
+		bottom: 3%;
+		right: min(5%, 20px);
+	}
+}
+
+/* Desktop */
+
+@media (min-width: 1000px) {
+	.site-landing {
+		height: 45vh;
+	}
+	.site-landing picture:first-child {
+		display: flex;
+	}
+	picture:first-child img.landing-image {
+		height: auto;
+	}
+	.site-heading-text span {
+		display: inline-block;
+	}
+
+	.big-text {
+		font-size: 42px;
+	}
+
+	.pets-of-the-week h2 {
+		font-size: 35px;
+	}
+	.site-landing .landing-text {
+		font-size: 20px;
+		padding: 15px;
+	}
+
+	.additional-text {
+		margin-top: 15px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.site-heading-text {
+		font-size: 50px;
+	}
+	.site-landing {
+		height: 50vh;
+	}
+
+	/* .site-landing picture:first-child img {
+		background: url('../images/arnold.png') no-repeat center center/cover;
+	} */
+
+	.site-landing .inner-column {
+		width: min(80%, 1000px);
+		height: 400px;
+		z-index: 50;
+	}
+
+	.site-landing picture:first-child {
+		display: flex;
+	}
+	picture:first-child img.landing-image {
+		height: auto;
+	}
+
+	.site-content .pets-section {
+		display: flex;
+	}
+
+	.pets-section .pet {
+		flex: 1;
+	}
+
+	.pet .inner-column {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.pom {
+		background-color: var(--green);
+	}
+
+	.pom a {
+		color: var(--slate-blue);
+		border-color: var(--slate-blue);
+	}
+
+	.pet-info a {
+		width: min(95%, 275px);
+	}
+
+	header .site-landing {
+		position: relative;
+	}
+
+	.site-landing .pug,
+	.site-landing .kitty-top {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		width: 300px;
+		z-index: 50;
+	}
+
+	.site-landing .kitty-top {
+		right: 0;
+		z-index: 0;
+	}
+}
