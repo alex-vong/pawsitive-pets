@@ -109,7 +109,7 @@ main * {
 	margin-top: 20px;
 	padding: 10px 15px;
 	color: var(--white);
-	border: 1px solid red;
+
 	background-color: rgba(216, 120, 46, 0.9);
 }
 
@@ -237,6 +237,8 @@ a:hover {
 @media (min-width: 500px) {
 	nav.site-header {
 		padding: 15px;
+		position: sticky;
+		top: 0;
 	}
 	.site-header img {
 		width: 100px;
@@ -272,6 +274,12 @@ a:hover {
 }
 
 @media (min-width: 850px) {
+	#site-header {
+		position: sticky;
+		top: 0;
+		z-index: 99;
+	}
+
 	.site-landing .inner-column {
 		height: 40vh;
 		display: flex;
@@ -289,8 +297,9 @@ a:hover {
 	}
 
 	.site-landing .landing-text {
+		display: flex;
 		height: 245.5px;
-		align-items: stretch;
+		/* align-items: stretch; */
 		margin-top: 10px;
 	}
 
@@ -298,9 +307,6 @@ a:hover {
 		flex: 1.5;
 	}
 
-	/* section.pet {
-		z-index: 8;
-	} */
 	.pet {
 		height: 40vh;
 		display: flex;
@@ -318,6 +324,7 @@ a:hover {
 	main .kitty,
 	main .pom {
 		position: relative;
+		z-index: 1;
 	}
 
 	picture.pug,
@@ -357,6 +364,11 @@ a:hover {
 }
 
 @media (min-width: 1025px) {
+	#site-header {
+		position: sticky;
+		top: 0;
+		z-index: 99;
+	}
 	.site-heading span {
 		display: inline-block;
 	}
