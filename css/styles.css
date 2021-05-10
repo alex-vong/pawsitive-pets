@@ -199,6 +199,7 @@ nav.site-header {
 
 /* Media Queries */
 
+/* smaller than 350px */
 @media (max-width: 350px) {
 	.site-header .site-logo {
 		width: 90px;
@@ -226,10 +227,32 @@ nav.site-header {
 	}
 }
 
+/* tablet size */
 @media (min-width: 768px) {
-	.site-content .inner-column {
+	.site-content .inner-column,
+	.site-landing .inner-column {
 		display: flex;
 		flex-direction: row;
+	}
+
+	.site-landing {
+		height: 35vh;
+		display: flex;
+		align-items: center;
+	}
+
+	.site-landing .inner-column {
+		width: 95%;
+	}
+
+	.site-landing picture {
+		border: 5px solid var(--purple);
+		flex: 1;
+	}
+
+	.site-landing .landing-text {
+		flex: 1;
+		margin: 0 0 0 5px;
 	}
 
 	.pet-info {
@@ -250,5 +273,17 @@ nav.site-header {
 		width: 250px;
 		bottom: 5%;
 		right: min(5%, 20px);
+	}
+}
+
+/* Desktop */
+
+@media (min-width: 1000px) {
+	.site-heading-text span {
+		display: inline-block;
+	}
+
+	.big-text {
+		font-size: 40px;
 	}
 }
