@@ -51,7 +51,10 @@ p {
 .kitty i {
 	color: var(--purple);
 }
-.pom i,
+
+.pom i {
+	color: var(--slate-blue);
+}
 .pets-of-the-week i {
 	color: var(--green);
 }
@@ -60,21 +63,21 @@ p {
 
 .pug,
 .kitty-top,
-.dog-house {
+.dog-house,
+.additional-text {
 	display: none;
 }
 
-header {
+nav {
 	position: sticky;
 	top: 0;
+	z-index: 90;
 }
 
 nav.site-header {
 	display: flex;
 	padding: 10px;
 	background: url('../images/humane.png') no-repeat center center/cover;
-	position: sticky;
-	top: 0;
 }
 
 .site-header .site-logo {
@@ -245,14 +248,20 @@ nav.site-header {
 		width: 95%;
 	}
 
-	.site-landing picture {
+	.site-landing picture:first-child {
 		border: 5px solid var(--purple);
 		flex: 1;
+	}
+
+	.additional-text {
+		display: block;
 	}
 
 	.site-landing .landing-text {
 		flex: 1;
 		margin: 0 0 0 5px;
+		font-size: 16px;
+		padding: 10px;
 	}
 
 	.pet-info {
@@ -270,8 +279,8 @@ nav.site-header {
 	.dog-house {
 		display: block;
 		position: absolute;
-		width: 250px;
-		bottom: 5%;
+		width: 280px;
+		bottom: 3%;
 		right: min(5%, 20px);
 	}
 }
@@ -279,11 +288,105 @@ nav.site-header {
 /* Desktop */
 
 @media (min-width: 1000px) {
+	.site-landing {
+		height: 45vh;
+	}
+	.site-landing picture:first-child {
+		display: flex;
+	}
+	picture:first-child img.landing-image {
+		height: auto;
+	}
 	.site-heading-text span {
 		display: inline-block;
 	}
 
 	.big-text {
-		font-size: 40px;
+		font-size: 42px;
+	}
+
+	.pets-of-the-week h2 {
+		font-size: 35px;
+	}
+	.site-landing .landing-text {
+		font-size: 20px;
+		padding: 15px;
+	}
+
+	.additional-text {
+		margin-top: 15px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.site-heading-text {
+		font-size: 50px;
+	}
+	.site-landing {
+		height: 50vh;
+	}
+
+	/* .site-landing picture:first-child img {
+		background: url('../images/arnold.png') no-repeat center center/cover;
+	} */
+
+	.site-landing .inner-column {
+		width: min(80%, 1000px);
+		height: 400px;
+		z-index: 50;
+	}
+
+	.site-landing picture:first-child {
+		display: flex;
+	}
+	picture:first-child img.landing-image {
+		height: auto;
+	}
+
+	.site-content .pets-section {
+		display: flex;
+	}
+
+	.pets-section .pet {
+		flex: 1;
+	}
+
+	.pet .inner-column {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.pom {
+		background-color: var(--green);
+	}
+
+	.pom a {
+		color: var(--slate-blue);
+		border-color: var(--slate-blue);
+	}
+
+	.pet-info a {
+		width: min(95%, 275px);
+	}
+
+	header .site-landing {
+		position: relative;
+	}
+
+	.site-landing .pug,
+	.site-landing .kitty-top {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		width: 300px;
+		z-index: 50;
+	}
+
+	.site-landing .kitty-top {
+		right: 0;
+		z-index: 0;
 	}
 }
