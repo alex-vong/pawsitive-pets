@@ -3,8 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Capriola&display=swap');
 @import 'meyers-reset.css';
 @import 'reset.css';
-@import 'tablet.css';
-@import 'desktop.css';
 
 :root {
 	--orange: #d8782e;
@@ -23,30 +21,27 @@
 	padding: 15px 0;
 }
 
-.site-heading span {
+.site-heading-text span {
 	display: none;
 }
 
 .big-text {
 	font-size: 40px;
+	font-weight: 900;
 }
 
 .medium-text {
 	font-size: 30px;
+	font-weight: 900;
 }
 
 .small-text {
 	font-size: 17px;
-	color: var(--white);
 }
 
 p {
 	line-height: 1.5;
-	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-}
-
-span {
-	display: inline-block;
+	font-family: 'short stack', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 .husky i {
@@ -59,12 +54,17 @@ span {
 	color: var(--green);
 }
 
-/* Navbar */
+/* Site Title and Logo Heading */
 
-nav {
+.pug,
+.kitty-top,
+.corgi-wink {
+	display: none;
+}
+
+header {
 	position: sticky;
 	top: 0;
-	z-index: 99;
 }
 
 nav.site-header {
@@ -73,78 +73,56 @@ nav.site-header {
 	background: url('../images/humane.png') no-repeat center center/cover;
 	position: sticky;
 	top: 0;
-	z-index: 100;
 }
 
-.site-logo {
+.site-header .site-logo {
 	width: 100px;
 }
 
-.site-heading {
-	display: flex;
-	align-self: flex-end;
-	padding: 10px;
-	color: black;
+.site-heading-text {
+	padding: 10px 10px 0 10px;
 }
 
 /* landing page */
 
-main * {
-	z-index: 2;
-}
 .site-landing {
-	background-color: limegreen;
 	background: url('../images/header-wall.png') no-repeat center center/cover;
-	padding: 15px 15px;
-	/* height: 72vh; */
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	z-index: 1;
-}
-
-.site-landing * {
-	margin: 10px;
+	padding: 15px;
 }
 
 .site-landing .landing-text {
-	margin-top: 20px;
+	margin-top: 18px;
 	padding: 10px 15px;
 	color: var(--white);
-
+	text-align: center;
 	background-color: rgba(216, 120, 46, 0.9);
 }
 
-.site-landing picture {
-	max-width: 100%;
-	margin: 0;
+.site-landing .landing-image {
+	height: 250px;
 }
 
-img.landing-image {
-	margin: 0;
-}
-
-.pet-info {
+/* .pet-info {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-}
+} */
 
 /* Site Content */
 
 .pet {
-	display: flex;
-	flex-direction: column;
+	/* display: flex;
+	flex-direction: column; */
 	padding: 20px;
 }
 
-.pet .mugshot {
+/* .pet .mugshot {
 	border-radius: 50%;
 	width: 200px;
 	border: 2px solid white;
-}
+} */
 
-.pet a {
+/* .pet a {
 	font-family: 'Itim', cursive;
 	font-size: 25px;
 	color: var(--orange);
@@ -152,55 +130,55 @@ img.landing-image {
 	padding: 15px;
 	border: 3px solid var(--orange);
 	width: min(80%, 275px);
-}
+} */
 
-.husky {
+/* .husky {
 	background-color: var(--purple);
-}
+} */
 
-.kitty {
+/* .kitty {
 	background-color: #cfcac4;
-}
+} */
 
-.pug-sleep {
+/* .pug-sleep {
 	bottom: 0;
 	right: 0;
 	width: 300px;
 	margin-top: 20px;
-}
-
+} */
+/*
 .pom picture,
 .husky picture,
 .kitty picture {
 	display: flex;
 	justify-content: center;
-}
-.corgi {
+} */
+/* .corgi {
 	width: 200px;
 	margin-top: 20px;
-}
+} */
 
-.cat-top {
+/* .cat-top {
 	margin: 20px 0 15px;
-}
+} */
 
-.kitty a {
+/* .kitty a {
 	color: var(--purple);
 	border-color: var(--purple);
-}
+} */
 
-.kitty .pet-description {
+/* .kitty .pet-description {
 	color: #333;
-}
+} */
 
-.pom {
+/* .pom {
 	background-color: var(--slate-blue);
-}
+} */
 
-.pom a {
+/* .pom a {
 	color: var(--green);
 	border-color: var(--green);
-}
+}  */
 
 /* footer */
 
@@ -219,148 +197,19 @@ footer p:last-child {
 }
 
 /* hover */
-
+/*
 a:hover {
 	background-color: var(--green);
 	color: var(--white);
 	scale: 1.05;
-}
-
+} */
+/*
 .kitty a:hover {
 	background-color: var(--orange);
-}
-
+} */
+/*
 .pom a:hover {
 	background-color: var(--purple);
-}
+} */
 
 /* Media Queries */
-
-@media (min-width: 500px) {
-	nav.site-header {
-		padding: 15px;
-		position: sticky;
-		top: 0;
-	}
-	.site-header img {
-		width: 100px;
-	}
-
-	.site-heading {
-		font-size: min(3.5rem, 50px);
-	}
-
-	.site-content {
-		max-width: 100%;
-	}
-	.pet {
-		max-width: 100%;
-	}
-
-	.inner-column {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: min(85%, 900px);
-		margin: 0 auto;
-	}
-
-	/* .kitty .pet-info {
-		align-items: flex-end;
-		padding-right: 20px;
-	} */
-
-	section.pet {
-		align-items: start;
-	}
-}
-
-@media (min-width: 850px) {
-	#site-header {
-		position: sticky;
-		top: 0;
-		z-index: 99;
-	}
-
-	.site-landing .inner-column {
-		height: 40vh;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-	}
-
-	.landing-image {
-		width: 450px;
-	}
-
-	.inner-column picture {
-		display: flex;
-		flex: 0.5;
-	}
-
-	.site-landing .landing-text {
-		display: flex;
-		height: 245.5px;
-		/* align-items: stretch; */
-		margin-top: 10px;
-	}
-
-	.inner-column .pet-info {
-		flex: 1.5;
-	}
-
-	.pet {
-		height: 40vh;
-		display: flex;
-		flex-direction: row;
-		align-items: flex-start;
-	}
-
-	.pet .inner-column {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
-
-	main .husky,
-	main .kitty,
-	main .pom {
-		position: relative;
-		z-index: 1;
-	}
-
-	picture.pug,
-	picture.kitty-top,
-	picture.corgi-wink {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-	}
-
-	.pet-info {
-		align-items: start;
-		margin-left: 15px;
-	}
-	.pet-info p {
-		font-style: 16px;
-		text-align: justify;
-	}
-
-	.kitty {
-		position: relative;
-	}
-	.kitty-top {
-		width: 250px;
-		position: absolute;
-		bottom: 0;
-		left: 10px;
-	}
-
-	.kitty picture {
-		order: 2;
-	}
-
-	.kitty .pet-info {
-		margin-right: 15px;
-	}
-}
