@@ -324,6 +324,9 @@ nav.site-header {
 		height: 50vh;
 	}
 
+	.small-text {
+		font-size: 20px;
+	}
 	.mugshot {
 		height: 200px;
 		width: 200px;
