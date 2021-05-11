@@ -18,7 +18,7 @@
 }
 
 .heading {
-	font-family: 'Short Stack', cursive;
+	font-family: 'Short Stack', Helvetica, sans-serif;
 	padding: 15px 0;
 }
 
@@ -131,7 +131,7 @@ nav.site-header {
 }
 
 .pet a {
-	font-family: 'Itim', cursive;
+	font-family: 'Itim', Helvetica, sans-serif;
 	font-size: 23px;
 	color: var(--orange);
 	margin: 20px auto;
@@ -324,8 +324,13 @@ nav.site-header {
 		height: 50vh;
 	}
 
+	.mugshot {
+		height: 200px;
+		width: 200px;
+	}
+
 	.site-landing .inner-column {
-		width: min(80%, 1000px);
+		width: min(85%, 1440px);
 		height: 400px;
 		z-index: 50;
 	}
@@ -350,7 +355,8 @@ nav.site-header {
 		height: 100%;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+
+		padding-top: 15px;
 	}
 
 	.pom {
@@ -364,6 +370,13 @@ nav.site-header {
 
 	.pom i {
 		color: var(--slate-blue);
+	}
+
+	.pet-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex: 2;
 	}
 
 	.pet-info a {
