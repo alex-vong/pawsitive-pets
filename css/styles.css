@@ -52,9 +52,7 @@ p {
 	color: var(--purple);
 }
 
-.pom i {
-	color: var(--slate-blue);
-}
+.pom i,
 .pets-of-the-week i {
 	color: var(--green);
 }
@@ -215,7 +213,7 @@ nav.site-header {
 
 @media (min-width: 500px) {
 	.inner-column {
-		width: min(90%, 1000px);
+		width: min(95%, 600px);
 		margin: 0 auto;
 	}
 	nav.site-header {
@@ -326,10 +324,6 @@ nav.site-header {
 		height: 50vh;
 	}
 
-	/* .site-landing picture:first-child img {
-		background: url('../images/arnold.png') no-repeat center center/cover;
-	} */
-
 	.site-landing .inner-column {
 		width: min(80%, 1000px);
 		height: 400px;
@@ -366,6 +360,10 @@ nav.site-header {
 	.pom a {
 		color: var(--slate-blue);
 		border-color: var(--slate-blue);
+	}
+
+	.pom i {
+		color: var(--slate-blue);
 	}
 
 	.pet-info a {
