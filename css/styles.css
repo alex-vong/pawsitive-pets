@@ -45,6 +45,11 @@ p {
 	font-family: 'short stack', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
+.bold-text,
+.hidden-heading {
+	font-weight: 900;
+}
+
 .husky i {
 	color: var(--orange);
 }
@@ -265,6 +270,7 @@ nav.site-header {
 
 	.site-landing .landing-text {
 		flex: 1;
+
 		margin: 0 0 0 5px;
 		font-size: 16px;
 		padding: 10px;
@@ -300,9 +306,9 @@ nav.site-header {
 	.site-landing picture:first-child {
 		display: flex;
 	}
-	picture:first-child img.landing-image {
+	/* picture:first-child img.landing-image {
 		height: auto;
-	}
+	} */
 	.site-heading-text span {
 		display: inline-block;
 	}
@@ -349,9 +355,9 @@ nav.site-header {
 	.site-landing picture:first-child {
 		display: flex;
 	}
-	picture:first-child img.landing-image {
+	/* picture:first-child img.landing-image {
 		height: auto;
-	}
+	} */
 
 	.site-content .pets-section {
 		display: flex;
