@@ -28,7 +28,7 @@
 
 .big-text {
 	/* font-size: clamp(40px, 10vw, 50px); */
-	font-size: clamp(1rem, 1rem + 2.7778vw, 3.5rem);
+	font-size: clamp(1rem, 1rem + 3.6697vw, 3.5rem);
 	font-weight: 900;
 }
 
@@ -96,7 +96,6 @@ nav.site-header {
 
 .site-landing {
 	background: url('../images/header-wall.png') no-repeat center center/cover;
-	padding: 15px;
 }
 
 .site-landing .landing-text {
@@ -108,8 +107,8 @@ nav.site-header {
 }
 
 .site-landing .landing-image {
-	/* height: 250px; */
 	height: auto;
+	padding: 10px;
 }
 
 /* Site Content */
@@ -241,12 +240,14 @@ nav.site-header {
 	.site-landing .inner-column {
 		display: flex;
 		flex-direction: row;
+		height: 75%;
 	}
 
 	.site-landing {
-		height: 35vh;
+		height: clamp(35vh, 40vh, 45vh);
 		display: flex;
 		align-items: center;
+		border: 3px solid red;
 	}
 
 	.site-landing picture:first-child {
@@ -254,6 +255,7 @@ nav.site-header {
 	}
 	picture:first-child img.landing-image {
 		height: auto;
+		padding: 0;
 	}
 
 	.site-landing .inner-column {
@@ -298,25 +300,24 @@ nav.site-header {
 	}
 }
 
+@media (min-width: 900px) {
+	.site-landing {
+		/* height: 35vh; */
+	}
+}
 /* Desktop */
 
-@media (min-width: 1000px) {
-	.site-landing {
+@media (min-width: 1070px) {
+	/* .site-landing {
 		height: 45vh;
-	}
+	} */
 	.site-landing picture:first-child {
 		display: flex;
 	}
-	/* picture:first-child img.landing-image {
-		height: auto;
-	} */
+
 	.site-heading-text span {
 		display: inline-block;
 	}
-
-	/* .big-text {
-		font-size: 42px;
-	} */
 
 	.pets-of-the-week h2 {
 		font-size: 35px;
@@ -332,12 +333,9 @@ nav.site-header {
 }
 
 @media (min-width: 1200px) {
-	/* .site-heading-text {
-		font-size: 50px;
-	} */
-	.site-landing {
+	/* .site-landing {
 		height: 50vh;
-	}
+	} */
 
 	.small-text {
 		font-size: 20px;
@@ -349,16 +347,13 @@ nav.site-header {
 
 	.site-landing .inner-column {
 		width: min(85%, 1440px);
-		height: 400px;
+		/* height: 400px; */
 		z-index: 50;
 	}
 
 	.site-landing picture:first-child {
 		display: flex;
 	}
-	/* picture:first-child img.landing-image {
-		height: auto;
-	} */
 
 	.site-content .pets-section {
 		display: flex;
