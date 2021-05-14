@@ -27,7 +27,8 @@
 }
 
 .big-text {
-	font-size: 40px;
+	/* font-size: clamp(40px, 10vw, 50px); */
+	font-size: clamp(1rem, 1rem + 2.7778vw, 3.5rem);
 	font-weight: 900;
 }
 
@@ -213,7 +214,7 @@ nav.site-header {
 	}
 
 	.site-header .site-heading-text {
-		font-size: 35px;
+		font-size: 10vw;
 	}
 }
 
@@ -313,9 +314,9 @@ nav.site-header {
 		display: inline-block;
 	}
 
-	.big-text {
+	/* .big-text {
 		font-size: 42px;
-	}
+	} */
 
 	.pets-of-the-week h2 {
 		font-size: 35px;
@@ -331,9 +332,9 @@ nav.site-header {
 }
 
 @media (min-width: 1200px) {
-	.site-heading-text {
+	/* .site-heading-text {
 		font-size: 50px;
-	}
+	} */
 	.site-landing {
 		height: 50vh;
 	}
