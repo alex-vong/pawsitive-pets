@@ -27,7 +27,8 @@
 }
 
 .big-text {
-	font-size: 40px;
+	font-size: clamp(40px, 4.2vw, 50px);
+
 	font-weight: 900;
 }
 
@@ -43,6 +44,11 @@
 p {
 	line-height: 1.5;
 	font-family: 'short stack', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.bold-text,
+.hidden-heading {
+	font-weight: 900;
 }
 
 .husky i {
@@ -90,7 +96,6 @@ nav.site-header {
 
 .site-landing {
 	background: url('../images/header-wall.png') no-repeat center center/cover;
-	padding: 15px;
 }
 
 .site-landing .landing-text {
@@ -102,7 +107,8 @@ nav.site-header {
 }
 
 .site-landing .landing-image {
-	height: 250px;
+	height: auto;
+	padding: 10px;
 }
 
 /* Site Content */
@@ -207,7 +213,7 @@ nav.site-header {
 	}
 
 	.site-header .site-heading-text {
-		font-size: 35px;
+		font-size: 10vw;
 	}
 }
 
@@ -226,6 +232,10 @@ nav.site-header {
 		display: flex;
 		align-items: center;
 	}
+
+	.site-landing .landing-text {
+		margin-bottom: 10px;
+	}
 }
 
 /* tablet size */
@@ -234,12 +244,22 @@ nav.site-header {
 	.site-landing .inner-column {
 		display: flex;
 		flex-direction: row;
+		height: 75%;
 	}
 
 	.site-landing {
-		height: 35vh;
+		height: clamp(35vh, 40vh, 45vh);
 		display: flex;
 		align-items: center;
+		border: 3px solid red;
+	}
+
+	.site-landing picture:first-child {
+		display: flex;
+	}
+	picture:first-child img.landing-image {
+		height: auto;
+		padding: 0;
 	}
 
 	.site-landing .inner-column {
@@ -253,14 +273,33 @@ nav.site-header {
 
 	.additional-text {
 		display: block;
+		margin-top: 10px;
 	}
 
 	.site-landing .landing-text {
 		flex: 1;
 		margin: 0 0 0 5px;
-		font-size: 16px;
-		padding: 10px;
+
+		padding: 5px;
 	}
+
+	.site-landing .landing-text {
+		font-size: 1.5vh;
+	}
+
+	.site-landing .landing-text .text-text {
+		/* border: 5px solid green; */
+		height: 95%;
+		/* display: flex;
+		flex-direction: column;
+		justify-content: stretch;
+		align-items: stretch; */
+	}
+
+	/* .text-text p {
+
+		flex: 1;
+	} */
 
 	.pet-info {
 		margin-left: 15px;
@@ -283,31 +322,27 @@ nav.site-header {
 	}
 }
 
+@media (min-width: 900px) {
+	.site-landing .landing-text {
+		font-size: 1.6vh;
+	}
+}
 /* Desktop */
 
-@media (min-width: 1000px) {
-	.site-landing {
-		height: 45vh;
-	}
+@media (min-width: 1070px) {
 	.site-landing picture:first-child {
 		display: flex;
 	}
-	picture:first-child img.landing-image {
-		height: auto;
-	}
+
 	.site-heading-text span {
 		display: inline-block;
-	}
-
-	.big-text {
-		font-size: 42px;
 	}
 
 	.pets-of-the-week h2 {
 		font-size: 35px;
 	}
 	.site-landing .landing-text {
-		font-size: 20px;
+		/* font-size: 20px; */
 		padding: 15px;
 	}
 
@@ -317,15 +352,12 @@ nav.site-header {
 }
 
 @media (min-width: 1200px) {
-	.site-heading-text {
-		font-size: 50px;
-	}
-	.site-landing {
+	/* .site-landing {
 		height: 50vh;
-	}
+	} */
 
-	.small-text {
-		font-size: 20px;
+	.site-landing .landing-text {
+		font-size: 1.6vh;
 	}
 	.mugshot {
 		height: 200px;
@@ -334,15 +366,12 @@ nav.site-header {
 
 	.site-landing .inner-column {
 		width: min(85%, 1440px);
-		height: 400px;
+
 		z-index: 50;
 	}
 
 	.site-landing picture:first-child {
 		display: flex;
-	}
-	picture:first-child img.landing-image {
-		height: auto;
 	}
 
 	.site-content .pets-section {
@@ -402,5 +431,11 @@ nav.site-header {
 	.site-landing .kitty-top {
 		right: 0;
 		z-index: 0;
+	}
+}
+
+@media (min-width: 1400px) {
+	.site-landing .landing-text {
+		font-size: 1.75vh;
 	}
 }
