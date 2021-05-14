@@ -27,8 +27,8 @@
 }
 
 .big-text {
-	/* font-size: clamp(40px, 10vw, 50px); */
-	font-size: clamp(1rem, 1rem + 3.6697vw, 3.5rem);
+	font-size: clamp(40px, 4.2vw, 50px);
+
 	font-weight: 900;
 }
 
@@ -231,6 +231,10 @@ nav.site-header {
 	.site-header h1.site-heading-text {
 		display: flex;
 		align-items: center;
+	}
+
+	.site-landing .landing-text {
+		margin-bottom: 10px;
 	}
 }
 
